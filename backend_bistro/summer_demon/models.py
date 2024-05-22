@@ -6,6 +6,7 @@ import json
 class MenuItem(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField(default=1.66)
+    category = models.CharField(max_length=20)
     description = models.TextField()
     picture = models.ImageField()
 

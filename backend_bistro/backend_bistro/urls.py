@@ -17,6 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.urls import path, include
+from rest_framework import routers
+from summer_demon.views import *
+
+router = routers.DefaultRouter()
+router.register(r'menu_items', MenuItemViewset)
+router.register(r'customers', CustomerViewset)
+router.register(r'orders', OrderViewset)
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', include(router.urls)),
 ]
