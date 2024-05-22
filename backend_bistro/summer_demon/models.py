@@ -8,7 +8,7 @@ class MenuItem(models.Model):
     price = models.FloatField(default=1.66)
     category = models.CharField(max_length=20)
     description = models.TextField()
-    picture = models.ImageField()
+    picture = models.TextField()
 
     def __str__(self) -> str:
         return f"MENU ITEM | ID: {self.id} | NAME: {self.name} - PRICE: {self.price} - DESCRIPTION: {self.description}"
