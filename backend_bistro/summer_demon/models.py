@@ -26,6 +26,7 @@ class Order(models.Model):
     foods_ordered = models.ManyToManyField(MenuItem)
     quantities = models.TextField() #list corresponding (1:1, in order) to ordered items, stored as JSON string
     completed = models.BooleanField(default=False)
+    price_total = models.FloatField(default=0)
 
     def set_quantities(self, new: list):
         self.quantities = json.dumps(new)
