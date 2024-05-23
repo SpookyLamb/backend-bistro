@@ -9,7 +9,7 @@ class MenuItemSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = ['id', 'name', 'birthday', 'soul_flavor']
+        fields = ['id', 'name']
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:

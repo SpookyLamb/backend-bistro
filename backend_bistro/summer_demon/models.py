@@ -15,11 +15,11 @@ class MenuItem(models.Model):
 
 class Customer(models.Model):
     name = models.CharField(max_length=100)
-    birthday = models.DateField()
-    soul_flavor = models.CharField(max_length=100)
+    # birthday = models.DateField()
+    # soul_flavor = models.CharField(max_length=100)
 
     def __str__(self) -> str:
-        return f"CUSTOMER | ID: {self.id} | NAME: {self.name} - BIRTHDAY: {self.birthday} - SOUL FLAVOR: {self.soul_flavor}"
+        return f"CUSTOMER | ID: {self.id} | NAME: {self.name}"
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
